@@ -1,46 +1,20 @@
 package io.lumon.userservice.model;
 
-import java.util.Objects;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter @Setter
+@EqualsAndHashCode(callSuper = true)
 public class Doctor extends User {
     private String position;
-    private int experience;
+    private double experience;
 
-    public Doctor(long id, String firstName, String lastName, String position, int experience) {
-        super(id, firstName, lastName);
+    public Doctor(long id, String firstName, String lastName,
+                  String mobileNumber, String position, double experience) {
+        super(id, firstName, lastName, mobileNumber);
         this.position = position;
         this.experience = experience;
-    }
-
-    public String getPosition() {
-        return position;
-    }
-
-    public void setPosition(String position) {
-        this.position = position;
-    }
-
-    public int getExperience() {
-        return experience;
-    }
-
-    public void setExperience(int experience) {
-        this.experience = experience;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        if (!super.equals(o)) return false;
-        Doctor doctor = (Doctor) o;
-        return experience == doctor.experience
-                && Objects.equals(position, doctor.position);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(super.hashCode(), position, experience);
     }
 
     @Override

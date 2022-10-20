@@ -13,6 +13,7 @@ public class UserController {
 
     @GetMapping
     public List<Doctor> allDoctors() {
-        return List.of(new Doctor(1, "Alex", "Miller", "Intern", 1));
+        return List.of(new Doctor(1, "Alex", "Miller",
+                "+10987564373","Intern", .75));
     }
 }
