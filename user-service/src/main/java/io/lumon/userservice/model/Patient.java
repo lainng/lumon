@@ -1,15 +1,13 @@
 package io.lumon.userservice.model;
 
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
-@Getter
-@Setter
-@EqualsAndHashCode(callSuper = true)
-public class Patient extends User {
-
-    public Patient(long id, String firstName, String lastName, String mobileNumber) {
-        super(id, firstName, lastName, mobileNumber);
-    }
+@Data
+public class Patient {
+    private long id;
+    private String firstName;
+    private String lastName;
+    private String email;
+    private String mobileNumber;
+    private Address address;
 }
