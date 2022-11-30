@@ -10,7 +10,6 @@ import java.time.OffsetDateTime;
 public class PatientTicketDto {
     private Long assignedDoctorId;
     private Long patientId;
-    private Long departmentId;
     private OffsetDateTime createdAt;
     private OffsetDateTime appointmentTime;
     private String description;
