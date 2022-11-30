@@ -1,9 +1,10 @@
 package io.lumon.clinicservice.model.dto;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 
-@Data
-public class FlowDto {
+@Data @AllArgsConstructor
+public class TicketsFlowDto {
     private Long clinicId;
     private Long patientId;
 }

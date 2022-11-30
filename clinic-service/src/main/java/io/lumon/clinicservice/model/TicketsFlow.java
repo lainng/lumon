@@ -7,7 +7,7 @@ import java.time.OffsetDateTime;
 import java.util.List;
 
 @Data
-public class Flow {
+public class TicketsFlow {
     private Long id;
     private OffsetDateTime createdAt;
     private Clinic clinic;
