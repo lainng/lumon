@@ -1,1 +1,6 @@
-
+spring:
+  datasource:
+    username: clinic-service
+    password: mcpwr8-lq35vk-p2qvi8
+    url: jdbc:postgresql://localhost:5433/clinic-service
+    driver-class-name: org.postgresql.Driver
