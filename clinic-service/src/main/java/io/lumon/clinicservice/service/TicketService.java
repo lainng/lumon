@@ -2,10 +2,12 @@ package io.lumon.clinicservice.service;
 
 import io.lumon.clinicservice.model.DoctorTicket;
 import io.lumon.clinicservice.model.PatientTicket;
+import io.lumon.clinicservice.model.dto.DoctorTicketDto;
+import io.lumon.clinicservice.model.dto.PatientTicketDto;
 
 public interface TicketService {
 
-    PatientTicket createTicketByPatient(Long patientId);
+    PatientTicket createPatientTicket(PatientTicketDto ticketDto);
 
-    DoctorTicket createTicketByDoctor(Long doctorId);
+    DoctorTicket createDoctorTicket(DoctorTicketDto ticketDto);
 }
