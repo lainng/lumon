@@ -9,6 +9,7 @@ import java.time.OffsetDateTime;
 public class DoctorTicketDto {
     private Long flowId;
     private Long whoAssignedId;
+    private Long departmentId;
     private String description;
     private TicketType type;
     private OffsetDateTime appointmentType;

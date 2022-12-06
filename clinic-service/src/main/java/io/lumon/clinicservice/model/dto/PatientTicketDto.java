@@ -11,7 +11,6 @@ public class PatientTicketDto {
     private Long assignedDoctorId;
     private Long patientId;
     private Long clinicId;
-    private OffsetDateTime createdAt;
     private OffsetDateTime appointmentTime;
     private String description;
     private TicketType type;
