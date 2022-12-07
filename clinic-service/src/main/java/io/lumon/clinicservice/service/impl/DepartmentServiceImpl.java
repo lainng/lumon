@@ -11,12 +11,17 @@ import java.util.List;
 public class DepartmentServiceImpl implements DepartmentService {
 
     @Override
-    public Department createDepartment(DepartmentDto dto) {
+    public Department update(DepartmentDto dto) {
         return null;
     }
 
     @Override
-    public List<Department> departmentsByClinicId(Long id) {
+    public Department create(DepartmentDto dto) {
+        return null;
+    }
+
+    @Override
+    public List<Department> departmentsByClinic(Long id) {
         return null;
     }
 }

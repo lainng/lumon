@@ -7,6 +7,7 @@ import io.lumon.clinicservice.service.ClinicService;
 import io.lumon.clinicservice.service.DepartmentService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -39,12 +40,18 @@ public class ClinicController {
 
     @GetMapping("/{id}/department")
     public ResponseEntity<List<Department>> departmentsByClinicId(@PathVariable Long id) {
-        return ResponseEntity.ok(departmentService.departmentsByClinicId(id));
+        return ResponseEntity.ok(departmentService.departmentsByClinic(id));
     }
 
     @PutMapping("/{id}/department")
     public ResponseEntity<Department> createDepartment(@RequestBody DepartmentDto dto, @PathVariable Long id) {
         dto.setClinicId(id);
-        return ResponseEntity.ok(departmentService.createDepartment(dto));
+        return ResponseEntity.ok(departmentService.create(dto));
+    }
+
+    @PatchMapping("/{id}/department")
+    public ResponseEntity<Department> updateDepartment(@RequestBody DepartmentDto dto, @PathVariable Long id) {
+        dto.setClinicId(id);
+        return ResponseEntity.ok(departmentService.update(dto));
     }
 }
