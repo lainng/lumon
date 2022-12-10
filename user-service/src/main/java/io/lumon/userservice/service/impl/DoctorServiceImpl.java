@@ -9,7 +9,12 @@ import org.springframework.stereotype.Service;
 public class DoctorServiceImpl implements DoctorService {
 
     @Override
-    public Doctor doctorRegistration(DoctorDto dto) {
+    public Doctor register(DoctorDto dto) {
+        return null;
+    }
+
+    @Override
+    public Doctor takeById(Long id) {
         return null;
     }
 }
