@@ -1,7 +1,7 @@
 package io.lumon.clinicservice.model;
 
-import io.lumon.clinicservice.type.TicketStatus;
-import io.lumon.clinicservice.type.TicketType;
+import io.lumon.clinicservice.jooq.enums.TicketStatus;
+import io.lumon.clinicservice.jooq.enums.TicketType;
 import lombok.Data;
 
 import java.time.OffsetDateTime;
@@ -10,7 +10,6 @@ import java.time.OffsetDateTime;
 public class PatientTicket {
     private Long id;
     private Doctor assignedDoctor;
-    private Department department;
     private OffsetDateTime createdAt;
     private OffsetDateTime appointmentTime;
     private String description;

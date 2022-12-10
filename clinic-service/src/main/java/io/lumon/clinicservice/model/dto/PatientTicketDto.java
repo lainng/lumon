@@ -1,13 +1,14 @@
 package io.lumon.clinicservice.model.dto;
 
-import io.lumon.clinicservice.type.TicketStatus;
-import io.lumon.clinicservice.type.TicketType;
+import io.lumon.clinicservice.jooq.enums.TicketStatus;
+import io.lumon.clinicservice.jooq.enums.TicketType;
 import lombok.Data;
 
 import java.time.OffsetDateTime;
 
 @Data
 public class PatientTicketDto {
+    private Long flowId;
     private Long assignedDoctorId;
     private Long patientId;
     private Long clinicId;
