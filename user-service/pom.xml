@@ -90,6 +90,7 @@
                     </jdbc>
                     <generator>
                         <database>
+                            <excludes>databasechangelog.*</excludes>
                             <inputSchema>public</inputSchema>
                         </database>
                         <target>
