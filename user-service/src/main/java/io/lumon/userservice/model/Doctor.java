@@ -10,6 +10,5 @@ public class Doctor {
     private String email;
     private String mobileNumber;
     private String position;
-    private double experience;
     private Address address;
 }
