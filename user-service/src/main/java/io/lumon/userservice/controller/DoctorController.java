@@ -28,6 +28,6 @@ public class DoctorController {
 
     @GetMapping("/{id}")
     public ResponseEntity<Doctor> doctorById(@PathVariable Long id) {
-        return ResponseEntity.ok(doctorService.takeById(id));
+        return ResponseEntity.ok(doctorService.doctorById(id));
     }
 }

@@ -5,5 +5,5 @@ import io.lumon.userservice.model.dto.DoctorDto;
 
 public interface DoctorService {
     Doctor register(DoctorDto dto);
-    Doctor takeById(Long id);
+    Doctor doctorById(Long id);
 }
